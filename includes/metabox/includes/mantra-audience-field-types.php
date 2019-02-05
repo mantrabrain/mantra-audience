@@ -171,7 +171,7 @@ function mantra_audience_meta_field_post_id_info( $args ) {
  *
  * @param array $args Field settings.
  *
- * @since 1.7.1
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_date( $args ) {
@@ -219,7 +219,7 @@ function mantra_audience_meta_field_date( $args ) {
  *
  * @param array $args Field settings
  *
- * @since 1.3.2
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_color( $args ) {
@@ -250,7 +250,7 @@ function mantra_audience_meta_field_color( $args ) {
  *
  * @param array $args Field settings
  *
- * @since 1.3.2
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_layout( $args ) {
@@ -302,7 +302,7 @@ function mantra_audience_meta_field_layout( $args ) {
 /**
  * Generates select field as a button
  *
- * @since 1.3.2
+ * @since 1.0.0
  *
  * @param array $args Field settings
  *
@@ -397,7 +397,7 @@ function mantra_audience_meta_field_dropdownbutton( $args ) {
  *
  * @param array $args Field settings
  *
- * @since 1.3.2
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_dropdown( $args ) {
@@ -479,7 +479,7 @@ function mantra_audience_meta_field_radio( $args ) {
  * @param bool  $call_before_after Whether to output common wrapping markup before and after the field
  * @param bool  $echo Whether to echo or return the field
  *
- * @since 1.3.2
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_separator( $args ) {
@@ -506,7 +506,7 @@ function mantra_audience_meta_field_separator( $args ) {
  *
  * @param array $args Field settings
  *
- * @since 1.3.2
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_checkbox( $args ) {
@@ -541,7 +541,7 @@ function mantra_audience_meta_field_checkbox( $args ) {
  *
  * @param array $args Field settings
  *
- * @since 1.3.2
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_textbox( $args ) {
@@ -580,7 +580,7 @@ function mantra_audience_meta_field_textbox( $args ) {
  *
  * @param array $args Field settings
  *
- * @since 1.3.2
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_textarea( $args ) {
@@ -681,7 +681,7 @@ function mantra_audience_meta_field_video( $args ) {
  * @param array $meta_box field definition in key => value format
  * @param bool $echo Whether to echo or return the field
  * @return string field markup with label
- * @since 1.3.2
+ * @since 1.0.0
  */
 function mantra_audience_meta_field_get_label( $html, $meta_box, $echo = false ) {
 	$label_for = ( isset( $meta_box['name'] ) && '' != $meta_box['name'] ) ? esc_attr( $meta_box['name'] ) : '';
@@ -1166,7 +1166,7 @@ if( ! function_exists( 'mantra_audience_meta_field_query_category' ) ) :
 /**
  * query_category field type, display an option to select categories for Query Posts feature
  *
- * @since 2.8.8
+ * @since 1.0.0
  */
 function mantra_audience_meta_field_query_category( $args ) {
 	extract( $args );
@@ -1294,7 +1294,7 @@ function mantra_audience_meta_field_repeater( $args, $call_before_after = true, 
  *
  * @param array $args Field settings
  *
- * @since 1.3.2
+ * @since 1.0.0
  * @return string
  */
 function mantra_audience_meta_field_image_radio( $args ) {

@@ -27,7 +27,7 @@ class Mantra_Audience_Plugin_Compatibility {
 	/**
 	 * Actions to perform before rendering the popup
 	 *
-	 * @since 1.0.5
+	 * @since 1.0.0
 	 */
 	function mantra_audience_before_render() {
 		global $mantraAudienceBuilder;
@@ -49,7 +49,7 @@ class Mantra_Audience_Plugin_Compatibility {
 	/**
 	 * Revert the changes made in self::mantra_audience_before_render()
 	 *
-	 * @since 1.0.5
+	 * @since 1.0.0
 	 */
 	function mantra_audience_after_render() {
 		remove_filter( 'mantra_audience_builder_enqueue_stylesheet', array( $this, 'disable_static_stylesheet' ) );

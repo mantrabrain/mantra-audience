@@ -4,7 +4,7 @@ if( ! class_exists( 'Mantra_Audience_Term_Meta' ) ) :
  * Manage custom fields for taxonomy terms
  *
  * @package mantraAudience Metabox
- * @since 1.0.3
+ * @since 1.0.0
  */
 class Mantra_Audience_Term_Meta {
 
@@ -195,7 +195,7 @@ class Mantra_Audience_Term_Meta {
 	/**
 	 * Enqueues mantraAudience Metabox assets on term edit pages
 	 *
-	 * @since 1.0.1
+	 * @since 1.0.0
 	 */
 	function enqueue() {
 		if ( in_array( get_current_screen()->base, array( 'term', 'edit-tags' ) ) ) {

@@ -130,11 +130,8 @@ final class Mantra_Audience {
 		if ( ! is_blog_installed() || apply_filters( 'mantra_audience_install_skip_create_files', false ) ) {
 			return;
 		}
-        $path = trailingslashit( dirname( __FILE__ ) );
-        include( $path . 'sample/sample.php' );
 
-        mantra_audience_setup();
-        Mantra_Audience::get_instance()->register_post_type();
+        Mantra_Audience_Main::get_instance()->register_post_type();
         flush_rewrite_rules();
 	}
 

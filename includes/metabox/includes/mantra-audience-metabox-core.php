@@ -19,7 +19,7 @@ class Mantra_Audience_Metabox {
 	 * Setup plugin actions.
 	 *
 	 * Hooked to init[100] to ensure post types are loaded
-	 * @since 1.0.3
+	 * @since 1.0.0
 	 */
 	function hooks() {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
@@ -40,7 +40,7 @@ class Mantra_Audience_Metabox {
 	 * Returns a list of all meta boxes registered through mantraAudience Metabox plugin
 	 *
 	 * @return array
-	 * @since 1.0.2
+	 * @since 1.0.0
 	 */
 	function get_meta_boxes() {
 		static $meta_boxes = null;
@@ -67,7 +67,7 @@ class Mantra_Audience_Metabox {
 	 *
 	 * @param $id string the ID of the metabox registered using "mantra_audience_metaboxes" filter hook
 	 * @return array
-	 * @since 1.0.2
+	 * @since 1.0.0
 	 */
 	public function get_meta_box( $id ) {
 		$meta_boxes = $this->get_meta_boxes();
@@ -84,7 +84,7 @@ class Mantra_Audience_Metabox {
 	 * @param $meta_box string the ID of the metabox registered using "mantra_audience_metaboxes" filter hook
 	 * @param $post_type string optional post_type to filter down the list of tabs displayed in the meta box
 	 * @return array
-	 * @since 1.0.2
+	 * @since 1.0.0
 	 */
 	function get_meta_box_options( $meta_box, $post_type = null ) {
 		if( ! isset( $this->panel_options[$meta_box] ) ) {
@@ -186,7 +186,7 @@ class Mantra_Audience_Metabox {
 	/**
 	 * Helper function that saves the custom field
 	 *
-	 * @since 1.0.2
+	 * @since 1.0.0
 	 */
 	function _save_meta( $field, $post_id ) {
 		$new_meta = isset( $field['name'] ) && isset( $_POST[$field['name']] ) ? $_POST[$field['name']] : '';
@@ -412,7 +412,7 @@ class Mantra_Audience_Metabox {
 	/**
 	 * Enqueues mantraAudience Metabox assets
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	function enqueue() {
 		wp_enqueue_media();
@@ -427,7 +427,7 @@ class Mantra_Audience_Metabox {
 	 * Protect $mantra_audience_write_panels fields
 	 * This will hide these fields from Custom Fields panel
 	 *
-	 * @since 1.8.2
+	 * @since 1.0.0
 	 */
 	function protected_meta( $protected, $meta_key, $meta_type ) {
 		global $typenow;

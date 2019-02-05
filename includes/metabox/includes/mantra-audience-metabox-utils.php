@@ -4,7 +4,7 @@
  * Takes an array of options and return a one dimensional array of all the field names
  *
  * @return array
- * @since 1.0.2
+ * @since 1.0.0
  */
 function mantra_audience_metabox_get_field_names( $arr ) {
 	$list = array();
@@ -21,7 +21,7 @@ function mantra_audience_metabox_get_field_names( $arr ) {
  * Takes an options array and returns a one-dimensional list of fields
  *
  * @return array
- * @since 1.0.2
+ * @since 1.0.0
  */
 function mantra_audience_metabox_make_flat_fields_array( $arr ) {
 	$list = array();
@@ -41,7 +41,7 @@ function mantra_audience_metabox_make_flat_fields_array( $arr ) {
 /**
  * Check if assignments are applied in the current context
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function mantra_audience_verify_assignments( $assignments ) {
 	$visible = true;

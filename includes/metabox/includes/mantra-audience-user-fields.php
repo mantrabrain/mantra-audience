@@ -4,7 +4,7 @@ if( ! class_exists( 'Mantra_Audience_User_Meta' ) ) :
  * Manage custom fields for user profiles
  *
  * @package mantraAudience Metabox
- * @since 1.0.1
+ * @since 1.0.0
  */
 class Mantra_Audience_User_Meta {
 
@@ -137,7 +137,7 @@ class Mantra_Audience_User_Meta {
 	/**
 	 * Enqueues mantraAudience Metabox assets on user profile page
 	 *
-	 * @since 1.0.1
+	 * @since 1.0.0
 	 */
 	function enqueue() {
 		global $pagenow;

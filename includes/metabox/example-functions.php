@@ -6,7 +6,7 @@
  * your theme's functions.php file, or "include" it.'
  *
  * @package mantraAudience Metabox
- * @since 1.0
+ * @since 1.0.0
  */
 
 /**
@@ -231,7 +231,7 @@ add_filter( 'mantra_audience_metabox/fields/tm-example', 'mantra_audience_metabo
  * Add sample fields to the user profile screen
  *
  * @return array
- * @since 1.0.1
+ * @since 1.0.0
  */
 function mantra_audience_metabox_example_user_fields( $fields ) {
 	$fields['mantra-audience-metabox-sample'] = array(
@@ -259,7 +259,7 @@ add_filter( 'mantra_audience_metabox/user/fields', 'mantra_audience_metabox_exam
 /**
  * Add a sample Color field to Category taxonomy
  *
- * @since 1.0.3
+ * @since 1.0.0
  * @return array
  */
 function mantra_audience_metabox_example_category_fields( $fields ) {

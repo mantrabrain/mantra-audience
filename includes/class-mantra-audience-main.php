@@ -348,7 +348,7 @@ if(!class_exists('Mantra_Audience_Main')) {
         /**
          * Use custom template file on popup single pages
          *
-         * @since 1.0
+         * @since 1.0.0
          */
         function template_include($template)
         {
@@ -362,7 +362,7 @@ if(!class_exists('Mantra_Audience_Main')) {
         /**
          * Checks whether a popup should be displayed or not
          *
-         * @since 1.0
+         * @since 1.0.0
          * @return bool
          */
         function is_popup_visible($id)
@@ -415,7 +415,7 @@ if(!class_exists('Mantra_Audience_Main')) {
 /**
  * Check if option is set for the current popup in the loop
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function mantra_audience_check( $var ) {
 	global $post;
@@ -430,7 +430,7 @@ function mantra_audience_check( $var ) {
 /**
  * Get an option for the current popup in the loop
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function mantra_audience_get( $var, $default = null ) {
 	global $post;

@@ -22,7 +22,7 @@ if( ! function_exists( 'mantra_audience_metabox_bootstrap' ) ) :
 /**
  * Load and bootstrap mantraAudience Metabox API
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function mantra_audience_metabox_bootstrap() {
 	if( ! class_exists( 'Mantra_Audience_Metabox' ) ) {
