@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Mantra Audience
  * Description: Lead generation & Popup plugin for WordPress.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Mantrabrain
  * Author URI: https://mantrabrain.com
  * License: GPLv3 or later
@@ -40,3 +40,4 @@ function mantra_audience_callback() {
 
 // Global for backwards compatibility.
 $GLOBALS['mantra-audience'] = mantra_audience_callback();
+

@@ -26,5 +26,5 @@ if( mantra_audience_check( 'popup_overlay_color' ) ) {
 $styles[] = mantra_audience_get_custom_css();
 
 if( ! empty( $styles ) ) {
-	printf( '<style>%s</style>', join( "\n", $styles ) );
+    $mantra_audience_custom_css.= join( "\n", $styles );
 }

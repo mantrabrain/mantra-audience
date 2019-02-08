@@ -1,5 +1,5 @@
 <?php
-if(!class_exists('Mantra_Audience_Main')) {
+if (!class_exists('Mantra_Audience_Main')) {
     class Mantra_Audience_Main
     {
 
@@ -8,7 +8,7 @@ if(!class_exists('Mantra_Audience_Main')) {
         /**
          * Creates or returns an instance of this class.
          *
-         * @return    A single instance of this class.
+         * @return   A single instance of this class.
          */
         public static function get_instance()
         {
@@ -17,8 +17,6 @@ if(!class_exists('Mantra_Audience_Main')) {
 
         private function __construct()
         {
-            include MANTRA_AUDIENCE_DIR . 'includes/plugin-compatibility.php';
-
             add_action('init', array($this, 'i18n'), 5);
             add_action('init', array($this, 'register_post_type'));
             add_filter('mantra_audience_do_metaboxes', array($this, 'meta_box'));
@@ -30,6 +28,9 @@ if(!class_exists('Mantra_Audience_Main')) {
             add_action('admin_enqueue_scripts', array($this, 'tinymce_localize'));
             add_filter('template_include', array($this, 'template_include'), 100);
             add_action('template_redirect', array($this, 'hooks'));
+            add_action('wp_footer', array($this, 'footer_script'), 2);
+
+
         }
 
         public function hooks()
@@ -194,8 +195,6 @@ if(!class_exists('Mantra_Audience_Main')) {
 
         function render()
         {
-            global $mantraAudienceBuilder;
-
             do_action('mantra_audience_before_render');
 
             echo $this->load_view('render.php', array(
@@ -208,6 +207,7 @@ if(!class_exists('Mantra_Audience_Main')) {
         public function enqueue()
         {
             wp_enqueue_script('jquery');
+
         }
 
         function loader()
@@ -278,6 +278,8 @@ if(!class_exists('Mantra_Audience_Main')) {
                     'menuName' => __('Mantra Audience', 'mantra-audience'),
                 )
             ));
+
+
         }
 
         function get_manual_popup_list()
@@ -408,7 +410,42 @@ if(!class_exists('Mantra_Audience_Main')) {
             return $visible;
         }
 
+        function footer_script()
+        {
+            global $mantra_audience_custom_css;
+
+            wp_enqueue_script(
+                'mantra-lightbox',
+                MANTRA_AUDIENCE_URI . 'assets/js/lightbox.min.js'
+            );
+
+            wp_enqueue_script(
+                'mantra-custom-script',
+                MANTRA_AUDIENCE_URI . 'assets/js/scripts.js'
+            );
+
+            wp_enqueue_style(
+                'mantra-audience-builder-animate',
+                MANTRA_AUDIENCE_URI . 'assets/css/animate.min.css'
+            );
+
+             wp_enqueue_style(
+                'magnific',
+                MANTRA_AUDIENCE_URI . 'assets/css/lightbox.css'
+            );
+
+             wp_enqueue_style(
+                'mantra-audience-style',
+                MANTRA_AUDIENCE_URI . 'assets/css/styles.css'
+            );
+
+            wp_add_inline_style('mantra-audience-style', $mantra_audience_custom_css);
+
+
+        }
+
     }
+
     Mantra_Audience_Main::get_instance();
 }
 
@@ -417,14 +454,15 @@ if(!class_exists('Mantra_Audience_Main')) {
  *
  * @since 1.0.0
  */
-function mantra_audience_check( $var ) {
-	global $post;
+function mantra_audience_check($var)
+{
+    global $post;
 
-	if ( is_object( $post ) && get_post_meta( $post->ID, $var, true ) != '' && get_post_meta( $post->ID, $var, true ) ) {
-		return true;
-	} else {
-		return false;
-	}
+    if (is_object($post) && get_post_meta($post->ID, $var, true) != '' && get_post_meta($post->ID, $var, true)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -432,14 +470,15 @@ function mantra_audience_check( $var ) {
  *
  * @since 1.0.0
  */
-function mantra_audience_get( $var, $default = null ) {
-	global $post;
+function mantra_audience_get($var, $default = null)
+{
+    global $post;
 
-	if ( is_object( $post ) && get_post_meta( $post->ID, $var, true ) !== '' ) {
-		return get_post_meta( $post->ID, $var, true );
-	} else {
-		return $default;
-	}
+    if (is_object($post) && get_post_meta($post->ID, $var, true) !== '') {
+        return get_post_meta($post->ID, $var, true);
+    } else {
+        return $default;
+    }
 }
 
 /**
@@ -447,9 +486,10 @@ function mantra_audience_get( $var, $default = null ) {
  *
  * @return string
  */
-function mantra_audience_get_custom_css() {
-	$css = mantra_audience_get( 'custom_css' );
-	$css = str_replace( '%POPUP%', '#mantra-audience-' . get_the_id(), $css );
+function mantra_audience_get_custom_css()
+{
+    $css = mantra_audience_get('custom_css');
+    $css = str_replace('%POPUP%', '#mantra-audience-' . get_the_id(), $css);
 
-	return $css;
+    return $css;
 }

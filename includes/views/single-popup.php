@@ -3,7 +3,7 @@
  * Template file to display popup single pages
  * Removes clutter and all theme elements from the page, leaving just the content area
  */
-
+global $mantra_audience_custom_css;
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> style="background: #ccc; padding-top: 50px;">
 <head>
@@ -16,7 +16,7 @@
 	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
 
-		<style><?php echo mantra_audience_get_custom_css(); ?></style>
+        <?php $mantra_audience_custom_css.= mantra_audience_get_custom_css(); ?>
 
 	<?php endwhile; endif; ?>
 

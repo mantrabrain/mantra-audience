@@ -208,7 +208,7 @@ class Mantra_Audience_Metabox {
 	}
 
 	function render( $post, $metabox ) {
-		global $post, $typenow;
+		global $post, $typenow, $mantra_audience_custom_css;
 
 		$post_id = $post->ID;
 		$tabs = $this->get_meta_box_options( $metabox['id'], $typenow );
@@ -216,7 +216,7 @@ class Mantra_Audience_Metabox {
 
 			if( $metabox['id'] == 'mantra-audience-meta-boxes' ) {
 				// this is a hack to prevent mantraAudience Custom Panel from showing up when it has no options to show
-				echo '<style>#mantra-audience-meta-boxes, .metabox-prefs label[for="mantra-audience-meta-boxes-hide"] { display: none !important; }</style>';
+                $mantra_audience_custom_css.= '#mantra-audience-meta-boxes, .metabox-prefs label[for="mantra-audience-meta-boxes-hide"] { display: none !important; }\n';
 			}
 			return;
 		}

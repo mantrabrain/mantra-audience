@@ -20,7 +20,7 @@ final class Mantra_Audience {
 	 *
 	 * @var string
 	 */
-	public $version = '1.0.0';
+	public $version = '1.0.1';
 
 	/**
 	 * Theme single instance of this class.
@@ -131,7 +131,7 @@ final class Mantra_Audience {
 			return;
 		}
 
-        Mantra_Audience_Main::get_instance()->register_post_type();
+        ///Mantra_Audience_Main::get_instance()->register_post_type();
         flush_rewrite_rules();
 	}
 
