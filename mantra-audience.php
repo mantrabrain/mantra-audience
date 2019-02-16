@@ -20,7 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! defined( 'MANTRA_AUDIENCE_PLUGIN_FILE' ) ) {
 	define( 'MANTRA_AUDIENCE_PLUGIN_FILE', __FILE__ );
 }
-
 // Include the main CLASS
 if ( ! class_exists( 'Mantra_Audience' ) ) {
 	include_once dirname( __FILE__ ) . '/includes/class-mantra-audience.php';
