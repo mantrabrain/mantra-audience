@@ -1,4 +1,4 @@
-=== Mantra Audience ===
+=== Mantra Audience - Lead generation & Popup plugin for WordPress ===
 Contributors: Mantrabrain
 Tags: mantrabrain, marketing,lead, popup
 Requires at least: 4.7
