@@ -177,6 +177,7 @@ class Mantra_Audience_Term_Meta {
 
 				// when a default value is set for the field and it's the same as $new_meta, do not bother with saving the field
 				if( isset( $field['default'] ) && $new_meta == $field['default'] ) {
+
 					$new_meta = '';
 				}
 
@@ -185,7 +186,7 @@ class Mantra_Audience_Term_Meta {
 					delete_term_meta( $term_id, $field['name'] );
 				}
 
-				if ( $new_meta !== '' && $new_meta != $old_meta ) {
+				if ( $new_meta != '' && $new_meta != $old_meta ) {
 					update_term_meta( $term_id, $field['name'], $new_meta );
 				}
 			}

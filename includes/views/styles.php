@@ -6,7 +6,10 @@
  */
 
 $styles = array();
+global $post;
+
 if( mantra_audience_check( 'popup_width' ) ) {
+
 	if( $style == 'classic' ) {
 		$styles[] = "body.mantra-audience-showing-{$id} .mfp-wrap .mfp-inline-holder .mfp-content { width: " . mantra_audience_get( 'popup_width' ) . mantra_audience_get( 'popup_width_unit', 'px' ) . " !important; }";
 	} elseif( $style == 'slide-out' ) {

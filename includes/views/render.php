@@ -69,7 +69,6 @@ foreach ($popups as $post): setup_postdata($post);
         <?php the_content(); ?>
     </div>
     <?php
-
     include $this->get_view_path('styles.php');
 
 endforeach;

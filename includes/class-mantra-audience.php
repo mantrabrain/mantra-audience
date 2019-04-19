@@ -20,7 +20,7 @@ final class Mantra_Audience {
 	 *
 	 * @var string
 	 */
-	public $version = '1.0.1';
+	public $version = '1.0.2';
 
 	/**
 	 * Theme single instance of this class.
@@ -118,6 +118,7 @@ final class Mantra_Audience {
 		include_once MANTRA_AUDIENCE_ABSPATH.'includes/sample/sample.php';
 		include_once MANTRA_AUDIENCE_ABSPATH.'includes/class-mantra-audience-main.php';
 		include_once MANTRA_AUDIENCE_ABSPATH.'includes/metabox/mantra-audience-metabox.php';
+		include_once MANTRA_AUDIENCE_ABSPATH.'includes/class-mantra-audience-cpt.php';
 
 	}
 

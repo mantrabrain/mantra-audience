@@ -5,10 +5,11 @@
 	position: relative;
 	z-index: 9999;
 	max-width: 100%;
+	padding: 10px;
 }
 .mantra-audience p {
 	padding: 0;
-	margin: 0 0 1.3em;
+	margin: 0 0 0;
 }
 .mantra-audience h1,
 .mantra-audience h2,
@@ -80,11 +81,11 @@ body.mantra-audience-showing .mfp-wrap {
 }
 body.mantra-audience-style-classic .mfp-close {
 	color: #fff !important;
-	top: 1em;
-	right: 1em;
-	background: rgba(0,0,0,.5);
-    box-sizing: border-box;
-    border-radius: 100%;
+	top: -14px;
+	right: -14px;
+	background: #757575;
+	box-sizing: border-box;
+	border-radius: 100%;
 	z-index: 9999;
 }
 body.mantra-audience-style-classic .mfp-close:before,
@@ -105,7 +106,6 @@ body.mantra-audience-style-classic .mfp-wrap .mfp-inline-holder .mfp-content {
 	max-width: 100%;
 	max-height: 100%;
 	width: 100%;
-	overflow: auto;
 }
 .ma-popup-position-center-right .mfp-container,
 .ma-popup-position-top-right .mfp-container,
@@ -206,7 +206,7 @@ a.ma_popup {
 	background-color: #f5f5f5;
 	background-image: none;
 	vertical-align: middle;
-	display: inline-block;
+	display: none;
 
 	text-shadow: 0 1px 0 rgba(255,255,255,.1);
 	border-radius: .3em;
@@ -215,6 +215,7 @@ a.ma_popup {
 	-moz-transition:  background-color .3s, background-color .3s, border .3s, color .3s;
 	-o-transition:  background-color .3s, background-color .3s, border .3s, color .3s;
 	transition:  background-color .3s, background-color .3s, border .3s, color .3s;
+
 }
 a.ma_popup:hover {
 	text-decoration: none;

@@ -189,20 +189,24 @@ class Mantra_Audience_Metabox {
 	 * @since 1.0.0
 	 */
 	function _save_meta( $field, $post_id ) {
+
 		$new_meta = isset( $field['name'] ) && isset( $_POST[$field['name']] ) ? $_POST[$field['name']] : '';
 		$old_meta = get_post_meta( $post_id, $field['name'], true );
 
+
 		// when a default value is set for the field and it's the same as $new_meta, do not bother with saving the field
-		if( isset( $field['default'] ) && $new_meta == $field['default'] ) {
+		if( isset( $field['default'] ) && $new_meta == $field['default'] && !empty($old_meta)) {
 			$new_meta = '';
 		}
+
 
 		// remove empty meta fields from database
 		if( '' == $new_meta && metadata_exists( 'post', $post_id, $field['name'] ) ) {
 			delete_post_meta( $post_id, $field['name'] );
 		}
 
-		if( $new_meta !== '' && $new_meta != $old_meta ) {
+		if( $new_meta != '' && $new_meta != $old_meta ) {
+
 			update_post_meta( $post_id, $field['name'], $new_meta );
 		}
 	}

@@ -194,8 +194,10 @@ return array(
 					'label' => __('width', 'mantra-audience'),
 					'description' => '',
 					'type' => 'textbox',
-					'meta' => array('size' => 'small')
-				),
+					'meta' => array('size' => 'small'),
+                    'default' => '500',
+
+                ),
 				array(
 					'name' => 'popup_width_unit',
 					'title' => '',
