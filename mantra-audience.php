@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Mantra Audience - Lead generation & Popup plugin for WordPress
  * Description: Lead generation & Popup plugin for WordPress. [ma_popup] to show popup by shortcode.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Mantrabrain
  * Author URI: https://mantrabrain.com
  * License: GPLv3 or later

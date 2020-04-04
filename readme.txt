@@ -2,8 +2,8 @@
 Contributors: Mantrabrain
 Tags: mantrabrain, marketing,lead, popup
 Requires at least: 4.7
-Tested up to: 5.1.1
-Stable tag: 1.0.2
+Tested up to: 5.4
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,6 +23,8 @@ Get [free support](https://mantrabrain.com/support-forum/)
 
 == Changelog ==
 
+= 1.0.3 - 2020/04/02 =
+* Fixed - Version tested
 = 1.0.2 - 2019/04/19 =
 * Issue fixed
 * Layout issue fixed
